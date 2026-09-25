@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "provider": "OpenRouter",
+  "model": "openai/gpt-5.4-nano",
+  "calls": 8,
+  "tokens": 7715,
+  "reported_cost_usd": 0.0063215499999999996,
+  "sources_used": 1,
+  "comparison_scores": {
+    "baseline": 100.0,
+    "candidate": 100.0
+  },
+  "eligible": true,
+  "promotion": "not performed — requires human review",
+  "conclusion": "Live generation, memory citation, candidate proposal and six comparison responses validated. Structural scores are not business-quality evidence."
+}

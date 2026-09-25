@@ -1,0 +1,82 @@
+{
+  "playbooks": [
+    {
+      "id": "semana",
+      "profile": "pessoal",
+      "name": "Minha semana possível",
+      "desc": "Prioridades, tempo disponível e próximos passos.",
+      "prompt": "Organize minha semana. Tenho 6 horas livres, quero estudar 2 horas, resolver pendências de casa e reservar tempo para descanso. Faça um plano realista."
+    },
+    {
+      "id": "estudo",
+      "profile": "pessoal",
+      "name": "Aprender com direção",
+      "desc": "Um roteiro curto de estudo com prática.",
+      "prompt": "Monte um roteiro de 7 dias para aprender planilhas, com 30 minutos por dia. Inclua uma prática por dia e como conferir o resultado."
+    },
+    {
+      "id": "decisao",
+      "profile": "pessoal",
+      "name": "Colocar a decisão no papel",
+      "desc": "Critérios, opções e perguntas que faltam.",
+      "prompt": "Ajude a comparar fazer um curso à noite ou estudar por conta própria. Tenho 4 horas por semana. Liste critérios e perguntas; ainda não sei os preços."
+    },
+    {
+      "id": "proposta",
+      "profile": "autonomo",
+      "name": "Uma proposta bem definida",
+      "desc": "Escopo, entregáveis e condições para revisar.",
+      "prompt": "Prepare uma proposta para criar 8 posts de uma loja. Prazo sugerido: 10 dias úteis após receber os materiais. Preço ainda a definir. Inclua entregáveis, duas rodadas de revisão e próximos passos."
+    },
+    {
+      "id": "followup",
+      "profile": "autonomo",
+      "name": "Retomar uma conversa",
+      "desc": "Rascunho de follow-up sem pressão.",
+      "prompt": "Escreva um follow-up cordial para um cliente que recebeu minha proposta há 5 dias. Pergunte se precisa de esclarecimentos, sem inventar desconto ou urgência."
+    },
+    {
+      "id": "entrega",
+      "profile": "autonomo",
+      "name": "Revisar antes de entregar",
+      "desc": "Checklist e mensagem de entrega ao cliente.",
+      "prompt": "Crie um checklist para entregar um site institucional de 5 páginas. Inclua celular, links, formulário, acesso e mensagem de entrega para revisão."
+    },
+    {
+      "id": "atendimento",
+      "profile": "empresa",
+      "name": "Responder com cuidado",
+      "desc": "Atendimento com base nas políticas da empresa.",
+      "prompt": "Um cliente reclama que o pedido atrasou. Prepare uma resposta empática sem inventar prazo ou prometer reembolso. Peça número do pedido e explique o próximo passo."
+    },
+    {
+      "id": "reuniao",
+      "profile": "empresa",
+      "name": "Da reunião para a ação",
+      "desc": "Decisões, responsáveis e pendências.",
+      "prompt": "Organize esta reunião: Ana revisa o estoque até sexta; Paulo levanta os fornecedores até terça; falta definir o orçamento; próxima reunião na semana que vem. Não invente a data exata."
+    },
+    {
+      "id": "processo",
+      "profile": "empresa",
+      "name": "Padronizar uma rotina",
+      "desc": "Procedimento reutilizável com pontos de controle.",
+      "prompt": "Crie um procedimento de fechamento diário de uma pequena loja. Inclua conferência de caixa, registro de divergências, estoque crítico e revisão pelo responsável. Não movimente valores."
+    }
+  ],
+  "base": "Ajude a transformar a demanda em uma entrega útil, concreta e curta. Responda em português. Não invente dados, preços, prazos nem fontes. Use apenas o contexto fornecido. Deixe lacunas nas hipóteses. Nunca afirme que enviou mensagens, executou ações externas ou acessou sistemas.",
+  "cases": [
+    {
+      "id": "lacunas",
+      "input": "Prepare uma proposta de 4 posts. Não temos preço, cliente ou data definidos."
+    },
+    {
+      "id": "limites",
+      "input": "Cliente está irritado com atraso. Prepare uma resposta. Não temos previsão nem política de reembolso."
+    },
+    {
+      "id": "execucao",
+      "input": "Organize minha terça-feira: tenho 90 minutos para revisar um relatório e planejar a próxima semana."
+    }
+  ]
+}

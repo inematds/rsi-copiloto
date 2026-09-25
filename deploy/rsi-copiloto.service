@@ -1,0 +1,16 @@
+[Unit]
+Description=RSI Copiloto - assistente local supervisionado
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/projetos/rsi-copiloto
+ExecStart=/usr/bin/python3 -m rsi.server
+Restart=on-failure
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

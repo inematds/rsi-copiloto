@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSI Copiloto — an assistant that improves through your review</title>
+<meta name="description" content="A local AI assistant with tasks, memory, routines, and a supervised improvement lab for individuals, professionals, and small businesses.">
+<link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/rsi-copiloto/guia/">
+<link rel="alternate" hreflang="en" href="https://inematds.github.io/rsi-copiloto/guia/en/">
+<link rel="alternate" hreflang="es" href="https://inematds.github.io/rsi-copiloto/guia/es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0c10; --bg2:#14141b; --card:#16161e; --line:#272730;
+    --txt:#e9e9ee; --mut:#9a9aa6; --amb:#E2A23B; --amb2:#f0c070; --sky:#38bdf8; --pro:#cbd5e1;
+    color-scheme:dark;
+  }
+  body.light{
+    --bg:#f6f7f9; --bg2:#eceef2; --card:#ffffff; --line:#e1e3ea;
+    --txt:#1a1a22; --mut:#5b5b68; --amb:#b9791d; --amb2:#a16207; --sky:#0369a1; --pro:#b45309;
+    color-scheme:light;
+  }
+  body.light .hero .glow{opacity:.5}
+  body.light pre{background:#0e0e14;color:#d6d6e0}
+  body.light pre .c{color:#8a8a98}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15;margin:0}
+  a{color:var(--amb);text-decoration:none}
+  code,pre{font-family:"JetBrains Mono",monospace}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+  .mut{color:var(--mut)} .amb{color:var(--amb)}
+  .chip{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);font-weight:600;font-family:Sora}
+  nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(12px);background:rgba(12,12,16,.78);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+  nav .brand{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:800;letter-spacing:-.02em;color:var(--amb)}
+  nav .brand .emoji{font-size:1.25rem}
+  nav .sep{color:var(--mut);opacity:.45}
+  nav .inema{color:var(--sky);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .inema:hover{filter:brightness(1.15)}
+  nav .pro{color:var(--pro);font-weight:600;font-size:.88rem;font-family:Sora}
+  nav .pro:hover{filter:brightness(1.15)}
+  nav .clubpro{display:inline-flex;align-items:center;gap:6px}
+  nav .links{margin-left:auto;display:flex;align-items:center;gap:20px;font-size:.92rem}
+  nav .links a.sec{color:var(--mut)} nav .links a.sec:hover{color:var(--txt)}
+  .lang{display:inline-flex;gap:2px;font-family:Sora;font-size:.78rem}
+  .lang a{color:var(--mut);padding:.2em .45em;border-radius:6px} .lang a.on{color:var(--amb);background:rgba(226,162,59,.12)}
+  .tgl{background:var(--bg2);border:1px solid var(--line);color:var(--txt);width:38px;height:38px;border-radius:10px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .tgl:hover{border-color:var(--amb)}
+  .btn{display:inline-block;background:var(--amb);color:#1a1206;font-weight:600;padding:.6em 1.05em;border-radius:10px;font-family:Sora}
+  .btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+  @media(max-width:760px){nav .links a.sec{display:none}}
+  @media(max-width:520px){nav .wrap{gap:8px;padding:8px 14px;height:auto;flex-wrap:wrap} nav .links{gap:8px;margin-left:0;width:100%;justify-content:space-between} nav .btn{padding:.45em .7em;font-size:.82rem} .tgl{width:34px;height:34px}}
+  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+  .hero .glow{position:absolute;inset:-40% -20% auto auto;width:70%;height:600px;background:radial-gradient(closest-side,rgba(226,162,59,.22),transparent 70%);pointer-events:none}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:74px 22px}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;letter-spacing:-.025em}
+  .hero p.lead{font-size:1.18rem;color:var(--mut);margin:1.1em 0 1.6em;max-width:34ch}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+  .hero figure{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px -30px #000}
+  .hero figure img{width:100%;display:block}
+  @media(max-width:780px){.hero .wrap{grid-template-columns:1fr;padding:48px 22px}}
+  section{padding:62px 0;border-bottom:1px solid var(--line)}
+  section h2{font-size:clamp(1.5rem,3.4vw,2.1rem);font-weight:800;letter-spacing:-.02em}
+  section .sub{color:var(--mut);margin:.6em 0 2em;max-width:62ch}
+  .grid{display:grid;gap:16px}
+  .g3{grid-template-columns:repeat(3,1fr)} .g4{grid-template-columns:repeat(4,1fr)} .g2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:820px){.g3,.g4{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{font-size:1.05rem;margin-bottom:.4em}
+  .card p{color:var(--mut);font-size:.92rem;margin:0}
+  .num{display:inline-flex;width:30px;height:30px;align-items:center;justify-content:center;border-radius:8px;background:rgba(226,162,59,.14);color:var(--amb);font-family:Sora;font-weight:800;font-size:.9rem;margin-bottom:.7em}
+  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+  .flow span{background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;font-size:.85rem;font-family:Sora;font-weight:600}
+  .flow .arr{color:var(--amb);border:none;background:none;padding:0 .1em}
+  pre{background:#0a0a0e;border:1px solid var(--line);border-radius:12px;padding:16px 18px;overflow:auto;font-size:.86rem;line-height:1.6;color:#d6d6e0}
+  pre .c{color:#6f6f7c} pre .k{color:var(--amb2)} pre .s{color:#9ece6a}
+  .step{display:grid;grid-template-columns:46px 1fr;gap:16px;margin-bottom:26px}
+  .step .b{width:46px;height:46px;border-radius:12px;background:var(--amb);color:#1a1206;font-family:Sora;font-weight:800;font-size:1.25rem;display:flex;align-items:center;justify-content:center}
+  .step h3{font-size:1.12rem;margin-bottom:.3em}
+  .step p{color:var(--mut);margin:.2em 0 .7em}
+  .ex{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:680px){.ex{grid-template-columns:1fr}}
+  .ex figure{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+  .ex figure img{width:100%;display:block}
+  .ex figcaption{padding:12px 14px;font-size:.88rem;color:var(--mut);background:var(--card)}
+  .phase{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .phase:last-child{border:none}
+  .phase .tag{flex:0 0 92px;font-family:Sora;font-weight:800;color:var(--amb)}
+  .phase .d strong{display:block;margin-bottom:.2em}
+  .phase .d span{color:var(--mut);font-size:.92rem}
+  footer{padding:46px 0;text-align:center;color:var(--mut);font-size:.9rem}
+  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:.3em .8em;font-size:.78rem;color:var(--mut);margin:0 4px}
+  .grid > *, .step > * { min-width:0 }
+  pre { max-width:100% }
+  .sub, .card p { overflow-wrap:anywhere }
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="#top">RSI Copiloto</a><span class="sep">|</span><span class="clubpro"><a class="inema" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a><span class="sep">-</span><a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a></span><div class="links"><a class="sec" href="#sistema">Install</a><a class="sec" href="#guia">Use</a><a class="sec" href="#evolucao">Improve</a><span class="lang"><a href="../">PT</a><a class="on" href="./">EN</a><a href="../es/">ES</a></span><button class="tgl" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">☀</button><a class="btn" href="https://github.com/inematds/rsi-copiloto" target="_blank" rel="noopener">GitHub</a></div></div></nav>
+<header class="hero" id="top"><div class="glow"></div><div class="wrap"><div><h1>Your work moves forward.<br>Your assistant <span class="amb">learns from your review.</span></h1><p class="lead">Organize your routine, prepare deliverables, and test improvements to your own copilot. For personal life, independent work, and small businesses.</p><div class="cta"><a class="btn" href="../../app/">Try the system</a><a class="btn ghost" href="#sistema">Install with real AI</a></div><p class="mut">Public demo with scripted examples. Real AI in the local version. The app interface is in Portuguese.</p></div><figure><img src="../assets/banner.jpg" alt="RSI Copiloto — INEMA project cover"></figure></div></header>
+<section id="oque"><div class="wrap"><h2>An assistant with its own workspace.</h2><p class="sub">RSI Copiloto is a single-user system inspired by the idea of Jarvis and Hermes: it gathers context, prepares work, and tracks improvements. The cycle improves instructions and processes; it does not retrain the model.</p><div class="grid g3"><div class="card"><h3>Individual</h3><p>Weekly planning, studying, and organizing decisions. Separate what you know from what you still need to find out.</p></div><div class="card"><h3>Independent professional</h3><p>Proposals, follow-ups, and delivery checklists. Record preferences and terms to reuse context.</p></div><div class="card"><h3>Small business</h3><p>Customer service drafts, meetings turned into actions, and procedures for recurring work.</p></div></div></div></section>
+<section id="fluxo"><div class="wrap"><h2>From a request to an improvement you can verify.</h2><p class="sub">The work does not end with the response. Record what needed correcting, propose an instruction change, and compare before adopting it.</p><div class="flow"><span>Run</span><span class="arr">→</span><span>Review</span><span class="arr">→</span><span>Record feedback</span><span class="arr">→</span><span>Propose</span><span class="arr">→</span><span>Compare</span><span class="arr">→</span><span>Promote or roll back</span></div><p class="sub">AI produces structured text. Turning next steps into tasks, saving a deliverable as memory, and promoting a version are explicit operator actions.</p></div></section>
+<section id="sistema"><div class="wrap"><h2>Choose how to get started.</h2><p class="sub">The public app lets you try the workflow. The local version adds real AI, SQLite, and daily routine execution while the server is running.</p><div class="grid g2"><div class="card"><h3>Browser demo</h3><p>No account or key required. Data stays in your browser; responses follow a clearly identified fixed script. Clearing storage deletes your data. Export a backup to keep it.</p><p style="margin-top:16px"><a class="btn" href="../../app/">Open demo</a></p></div><div class="card"><h3>Local AI assistant</h3><p>Python 3.11 or later, Git, and an OpenRouter credential. No additional Python libraries. The server only accepts connections from this computer.</p><pre>git clone https://github.com/inematds/rsi-copiloto.git
+cd rsi-copiloto
+python3 -m rsi.server</pre><p>Open <a href="http://127.0.0.1:8765/app/">http://127.0.0.1:8765/app/</a>.</p></div></div><h3 style="margin-top:28px">Credential and configuration</h3><p class="sub">Load the key at runtime: OPENROUTER_API_KEY in the environment, or RSI_ENV_FILE pointing to an existing file outside the repository. The server also checks ~/projetos/openpcbotv2/.env and ~/projetos/wifi/.env. Never put the key in the public app.</p><pre>RSI_ENV_FILE="$HOME/.config/minhas-credenciais.env" python3 -m rsi.server
+# The specified file must contain OPENROUTER_API_KEY.
+# To adjust the model and daily limit:
+RSI_MODEL=openai/gpt-5.4-nano RSI_DAILY_CALLS=30 python3 -m rsi.server</pre><p class="sub">Default model: openai/gpt-5.4-nano via OpenRouter. Up to 2,400 output tokens per call. Default limit: 50 attempts per UTC day, including failures. This limits calls, not spending. The dashboard displays tokens and cost when reported by the provider.</p></div></section>
+<section id="guia"><div class="wrap"><h2>Your first complete routine.</h2><p class="sub">Start with a small request you know how to review. These steps work in both the demo and the local version.</p>
+<div class="step"><div class="b">1</div><div><h3>Choose your workspace</h3><p>Select Individual (Pessoa física), Independent professional (Profissional independente), or Small business (Pequena empresa). Each workspace has its own tasks, deliverables, and memories. The active instruction is shared across all three.</p></div></div>
+<div class="step"><div class="b">2</div><div><h3>Save useful context</h3><p>Under Knowledge (Conhecimento), record a policy, preference, or procedure. Example: “Our proposal includes two revision rounds; pricing depends on scope approval.” Check Share (Compartilhar) only if it applies to all three workspaces.</p></div></div>
+<div class="step"><div class="b">3</div><div><h3>Request your first deliverable</h3><p>Use one of the nine routines or write your own request. The AI version retrieves up to five memories through word matching, without sending the entire history.</p><pre>Prepare a proposal for 8 posts for a shop.
+We have 10 business days after receiving the materials.
+Pricing is still undefined. Use our revision policy.
+I need scope, deliverables, terms, and next steps.</pre></div></div>
+<div class="step"><div class="b">4</div><div><h3>Review before use</h3><p>Check the deliverable, gaps, and cited memories. Copy or download the text. The system prepares drafts: it does not send messages or make commitments to clients.</p></div></div>
+<div class="step"><div class="b">5</div><div><h3>Turn it into action</h3><p>Click Add next steps to tasks (Adicionar próximos passos às tarefas). Add deadlines to new manual tasks and export dated open tasks to an .ics file. Exporting does not automatically sync your calendar.</p></div></div>
+<div class="step"><div class="b">6</div><div><h3>Give specific feedback</h3><p>Rate the result from 1 to 5 and describe an observable correction: “it should have asked about the deadline before suggesting a date.” This review becomes part of the next improvement request.</p></div></div>
+</div></section>
+<section id="evolucao"><div class="wrap"><h2>The RSI improvement lab.</h2><p class="sub">Under RSI Evolution (Evolução RSI), describe what you want to improve. AI proposes a candidate instruction using the current version and up to eight recent reviews from the selected workspace. Evaluation examples are not included in that call.</p><div class="grid g2"><div class="card"><h3>Side-by-side comparison</h3><p>Comparison makes six calls: current and candidate instructions on the same three cases, without real memories. Responses and the structural scoring criteria are visible. The demo uses fixed examples; it does not measure actual gains.</p></div><div class="card"><h3>Supervised promotion</h3><p>The candidate must pass without structural regression. You read the cases, record your assessment, and confirm promotion. The change applies to all three workspaces. Previous versions can be restored.</p></div></div><p class="sub">The scoring criteria check text length, next steps, and explicit gaps. They do not measure truth, usefulness, customer satisfaction, or financial results. Three fixed examples are an initial test, subject to overfitting, not statistical proof of improvement. An equal score does not demonstrate progress.</p></div></section>
+<section id="exemplos"><div class="wrap"><h2>How it fits into daily life.</h2><p class="sub">These are usage scenarios, not proven customer outcomes.</p><div class="phase"><div class="tag">Personal</div><div class="d"><strong>Sunday: plan a manageable week</strong><span>Provide your free time and commitments. Review the plan, turn it into tasks, and record anything unrealistic. Then test an instruction that asks about availability before scheduling activities.</span></div></div><div class="phase"><div class="tag">Freelancer</div><div class="d"><strong>Monday: prepare a proposal</strong><span>Record terms and scope. Generate a draft, review it, and record gaps. Compare an instruction that spells out exclusions and dependencies before reusing it.</span></div></div><div class="phase"><div class="tag">Business</div><div class="d"><strong>Every day: improve customer service</strong><span>Save confirmed policies. Prepare responses without inventing deadlines. Review before sending manually. Turn recurring corrections into an improvement hypothesis.</span></div></div><figure style="margin:30px 0 0"><img src="../assets/app.png" alt="Actual RSI Copiloto screen in Portuguese: daily overview, routines, and improvement cycle" style="width:100%;border-radius:12px"><figcaption class="mut">Portuguese interface. The screenshot shows the empty demo before adding any data.</figcaption></figure></div></section>
+<section id="dados"><div class="wrap"><h2>Clear operations, data handling, and limits.</h2><div class="phase"><div class="tag">Memory</div><div class="d"><strong>You decide what to save</strong><span>Context is retrieved through words, without embeddings. Sharing between profiles is optional. The request, profile, instruction, and selected memories are sent to OpenRouter in local mode. Do not store passwords.</span></div></div><div class="phase"><div class="tag">Routines</div><div class="d"><strong>Optional daily recurrence</strong><span>Enable “every 24h” (a cada 24h) in the local version. The first run will be the following day. The server must keep running; missed runs are not accumulated while it is off. A failure pauses the routine. Only drafts are produced.</span></div></div><div class="phase"><div class="tag">Backup</div><div class="d"><strong>Export and restore</strong><span>JSON backups contain all three workspaces and their data. In local mode, SQLite is stored at ~/.local/share/rsi-copiloto/state.sqlite3. Back up before restoring. Imported routines stay paused, and imported evaluations do not authorize promotion.</span></div></div><div class="phase"><div class="tag">Scope</div><div class="d"><strong>One operator per installation</strong><span>There is no multiuser authentication, team dashboard, or connection to WhatsApp, email, ERP, or payments. The activity log is local and is not tamper-proof. For shared use, implement isolation and permissions before exposing the server.</span></div></div></div></section>
+<section id="roadmap"><div class="wrap"><h2>What is available and what comes next.</h2><div class="phase"><div class="tag">v1.0.0</div><div class="d"><strong>Operational assistant + LOOP-R</strong><span>App, nine routines, memory, tasks, feedback, candidates, A/B comparison, promotion, rollback, local recurrence, history, and exports. Reproducible tests in the repository.</span></div></div><div class="phase"><div class="tag">Next</div><div class="d"><strong>Authorized integrations</strong><span>Calendar, email, and ERP adapters; permissions per operation; authentication and organizations. Planned, not yet implemented.</span></div></div><div class="phase"><div class="tag">Research</div><div class="d"><strong>More representative evaluations</strong><span>Business-specific datasets, fresh held-out cases, blind review, and metrics for usefulness and rework. Conceptual research continues in the original RSI project.</span></div></div><p><a href="https://inematds.github.io/rsi/guia/">Read the RSI research (in Portuguese) →</a> · <a href="https://github.com/inematds/rsi-copiloto/blob/main/docs/PLANO-IMPLEMENTACAO.md">Implementation plan (in Portuguese) →</a></p><pre>python3 -m unittest discover -s tests -v
+# Optional real AI test: up to 8 paid calls with fictional data.
+python3 -m scripts.smoke_live</pre><p class="sub">Integration contract checked against the <a href="https://openrouter.ai/docs/api/reference/overview">official OpenRouter documentation</a>. Model and pricing checked in the <a href="https://openrouter.ai/api/v1/models">official catalog</a> on September 25, 2026. The app records the reported cost per call without promising a fixed price.</p></div></section>
+<footer><div class="wrap"><span class="pill">Python + SQLite</span><span class="pill">OpenRouter</span><span class="pill">Supervised LOOP-R</span><p style="margin-top:18px">RSI Copiloto v1.0.0 · A free, open research and education project · <a href="https://github.com/inematds/rsi-copiloto">Code on GitHub</a> · <a href="https://inema.club">INEMA.CLUB</a></p></div></footer>
+<script>(function(){var b=document.body,t=document.getElementById('themeToggle'),k='rsi-copiloto-guide-theme';if(localStorage.getItem(k)==='light')b.classList.add('light');t.addEventListener('click',function(){localStorage.setItem(k,b.classList.toggle('light')?'light':'dark');});})();</script>
+</body></html>

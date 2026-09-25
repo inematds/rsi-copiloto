@@ -1,0 +1,2 @@
+# Estado atual — 2026-09-25
+v1.0.0 implementada, separada da pesquisa rsi a pedido explícito do usuário. 23 testes backend, ciclo E2E Chromium e smoke pago com 8 chamadas aprovados (ver docs/VALIDACAO.md). Guia PT/EN/ES e demo prontos. Banco/credenciais sempre fora do Git. Publicação sendo feita no repo inematds/rsi-copiloto e catálogos via cópias isoladas em /tmp/rsi-publish, preservando alterações de outras sessões.
