@@ -1,6 +1,9 @@
 # Estado atual — 2026-09-25
-v1.0.0 concluída, separada da pesquisa rsi a pedido explícito do usuário. Sistema publicado em https://inematds.github.io/rsi-copiloto/app/; guia PT/EN/ES em /guia/. Backend local via systemd rsi-copiloto em 127.0.0.1:8765, configurado para ler credenciais existentes em runtime, banco fora do Git.
 
-23 testes backend, ciclo E2E Chromium (32 combinações de tela/tema/viewport) e smoke pago com 8 chamadas passaram. Guias e assets HTTP 200. Portal, busca e PRO receberam push; ver docs/PUBLICACAO.md para SHAs e contagens. Alterações de outras sessões nos repositórios compartilhados foram preservadas por publicar via /tmp/rsi-publish.
+RSI Copiloto v1.1.0: corrigido o escopo conforme o usuário. Missão → plano → aprovação → entrega → avaliação/correção → próxima etapa → conclusão. LOOP-R ligado às evidências da missão: medir notas/correções, criticar/propor, testar A/B, validar e promover sob revisão humana; novas missões usam a instrução aprovada, missões iniciadas ficam na versão original.
 
-Não há pendência de entrega. Limites deliberados: aplicação individual, interface PT, demo pública sem IA, sem conectores externos; avaliação estrutural não prova ganho semântico. Próximos incrementos estão em docs/PLANO-IMPLEMENTACAO.md. Não refazer chamadas pagas ou pesquisa sem necessidade.
+32 testes backend, E2E de missão até promoção na demo, regressão de UI (36 combinações) e smoke IA real passaram. Guias PT/EN/ES atualizados. Serviço local v1.1.0 em http://127.0.0.1:8765/app/, backup privado do banco antes da migração. Site público segue demonstração SEM IA; versão local gera conteúdo real.
+
+URLs existentes preservadas: https://inematds.github.io/rsi-copiloto/app/ e /guia/. O portal já aponta para esse guia; nenhuma nova entrada é necessária. Publicação da atualização pelo origin inematds/rsi-copiloto. Sem edições nos checkouts compartilhados de portal/busca/PRO nesta atualização.
+
+Limites: produzir texto, análise e documentos; ações externas aparecem como manuais e exigem resultado registrado pelo operador. Sem treinamento de pesos. Métricas estruturais não comprovam qualidade semântica. Ver docs/OPERACAO.md, docs/VALIDACAO.md e docs/SMOKE-MISSOES.json.

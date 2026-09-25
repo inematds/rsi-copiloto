@@ -1,0 +1,20 @@
+{
+  "version": "1.1.0",
+  "model": "openai/gpt-5.4-nano",
+  "steps": 2,
+  "attempts": [
+    2,
+    1
+  ],
+  "status": "completed",
+  "candidate_linked_to_mission": true,
+  "scores": {
+    "baseline": 100.0,
+    "candidate": 100.0
+  },
+  "calls": 11,
+  "tokens": 17063,
+  "reported_cost_usd": 0.01280695,
+  "promotion": "not performed; production promotion requires human review",
+  "scope": "Integration test, not evidence of improved business quality."
+}

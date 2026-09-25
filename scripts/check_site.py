@@ -28,6 +28,6 @@ for locale,path in [('pt-BR','guia/index.html'),('en','guia/en/index.html'),('es
         target=(file.parent/clean).resolve()
         assert target.is_relative_to(ROOT) and target.exists(),(path,url)
     print(path,'OK',p.counts['section'],'sections')
-for file in ['app/index.html','app/style.css','app/app.js','app/demo.js','app/backup.js','app/catalog.json','README.md','README.en.md','README.es.md']:
+for file in ['app/index.html','app/style.css','app/app.js','app/demo.js','app/backup.js','app/missions.js','app/catalog.json','README.md','README.en.md','README.es.md']:
     assert (ROOT/file).is_file(),file
 print('Static files and multilingual links OK')

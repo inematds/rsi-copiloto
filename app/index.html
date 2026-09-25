@@ -4,7 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="RSI Copiloto: assistente para organizar o trabalho, criar entregas e testar melhorias com supervisão.">
 <meta name="theme-color" content="#121416"><title>RSI Copiloto — sua mesa de trabalho</title>
-<link rel="stylesheet" href="style.css"><script src="backup.js" defer></script><script src="demo.js" defer></script><script src="app.js" defer></script>
+<link rel="stylesheet" href="style.css"><script src="backup.js" defer></script><script src="demo.js" defer></script><script src="missions.js" defer></script><script src="app.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Pular para o conteúdo</a>
@@ -15,7 +15,7 @@
 <select id="profile"><option value="pessoal">Pessoa física</option><option value="autonomo">Profissional independente</option><option value="empresa">Pequena empresa</option></select>
 <nav aria-label="Navegação principal" id="nav">
 <a href="#inicio" data-page="inicio"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10 12 3l9 7M5 9v12h14V9M9 21v-8h6v8"/></svg></span> Visão do dia</a>
-<a href="#assistente" data-page="assistente"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M6 6l3 3m6 6 3 3M6 18l3-3m6-6 3-3"/><circle cx="12" cy="12" r="3"/></svg></span> Assistente</a>
+<a href="#assistente" data-page="assistente"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M6 6l3 3m6 6 3 3M6 18l3-3m6-6 3-3"/><circle cx="12" cy="12" r="3"/></svg></span> Missões</a>
 <a href="#tarefas" data-page="tarefas"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg></span> Plano de ação <b id="task-count">0</b></a>
 <a href="#memoria" data-page="memoria"><span aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg></span> Conhecimento</a>
 <a href="#rotinas" data-page="rotinas"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 9a8 8 0 0 0-14-3L3 9m0-6v6h6m-5 6a8 8 0 0 0 14 3l3-3m0 6v-6h-6"/></svg></span> Rotinas</a>
@@ -28,7 +28,7 @@
 <header class="topbar"><span id="breadcrumb">Sua mesa de trabalho</span><div><span id="runtime" class="status">Carregando…</span><button id="theme" class="quiet" aria-label="Alternar tema">Tema claro</button></div></header>
 <div id="mode-banner" class="mode-banner" hidden></div>
 <main id="main" tabindex="-1"><div class="loading">Abrindo sua mesa de trabalho…</div></main>
-<footer class="app-footer">Você decide. O copiloto organiza, prepara e aprende com a revisão.<a href="../guia/">Guia de uso · v1.0.0</a></footer>
+<footer class="app-footer">Você decide. O copiloto organiza, prepara e aprende com a revisão.<a href="../guia/">Guia de uso · v1.1.0</a></footer>
 </div>
 </div>
 <div id="toast" role="status" aria-live="polite" hidden></div>

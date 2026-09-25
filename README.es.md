@@ -56,3 +56,17 @@ python3 -m scripts.smoke_live
 [Plan (en portugués)](docs/PLANO-IMPLEMENTACAO.md) · [Operación (en portugués)](docs/OPERACAO.md) · [Validación (en portugués)](docs/VALIDACAO.md) · [Registro de cambios (en portugués)](CHANGELOG.md)
 
 Proyecto abierto y gratuito de investigación y educación de [INEMA.CLUB](https://inema.club).
+
+## Misión y LOOP-R: dos ciclos conectados.
+
+Usted define la misión. La IA propone de una a cinco etapas. Revise el plan y pulse “Aprovar plano e executar primeira etapa” (aprobar el plan y ejecutar la primera etapa). El resultado aparece en la misma misión para su evaluación.
+
+Pulse “Aprovar e executar próxima etapa” (aprobar y ejecutar la siguiente etapa) para continuar utilizando el resultado aprobado y su evaluación. “Corrigir esta etapa” rehace el trabajo actual. Puede pausar, recargar y retomar. Guardar en la memoria es opcional: el historial de la misión ya se conserva.
+
+**Ejecutar → Medir → Criticar → Proponer → Probar → Validar → Promover → Repetir**
+
+Al finalizar, consulte su nota media y la cantidad de correcciones. Pulse “Iniciar LOOP-R desta missão” (iniciar el LOOP-R de esta misión). La IA recibe esas evidencias, analiza las fallas y propone una instrucción candidata. En el laboratorio, compare las versiones, lea las respuestas, registre su evaluación y después promueva.
+
+Las nuevas misiones usan la instrucción promovida. Las ya iniciadas conservan su versión original. Es una mejora supervisada de instrucciones y procedimientos, sin entrenar los pesos del modelo. Los tres casos generales evalúan estructura; no demuestran mejora de calidad ni resultados financieros.
+
+La demostración pública utiliza ejemplos programados. El flujo completo funciona; use la versión local para producir el contenido real de su misión con IA.

@@ -23,7 +23,7 @@ jobs:
           python-version: '3.12'
       - run: python3 -m unittest discover -s tests -v
       - run: python3 scripts/check_site.py
-      - run: node --check app/app.js && node --check app/demo.js && node --check app/backup.js
+      - run: node --check app/app.js && node --check app/demo.js && node --check app/backup.js && node --check app/missions.js
       - uses: actions/configure-pages@v5
       - name: Stage public files only
         run: |

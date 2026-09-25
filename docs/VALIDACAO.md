@@ -1,4 +1,13 @@
-# Evidências de validação — v1.0.0
+# Validação atual — v1.1.0
+
+- **32 testes Python passaram:** inclui missão completa, revisão de plano, correção de entrega, aprovação/continuidade, manual, pausa/cancelamento, idempotência, recuperação após falha, isolamento de perfil, orçamento, instrução fixada e migração de backups.
+- **Teste E2E de missões:** plano → execução → correção → pausa → recarga → retomada → próxima etapa com avaliação anterior → conclusão → exportação → proposta LOOP-R vinculada → comparação → revisão → promoção na demonstração. Sem erros JS; desktop/mobile.
+- **Regressão de interface:** funcionalidades anteriores aprovadas em 36 combinações de tela, viewport e tema. Backup de missões validado no navegador. Detector de interface sem achados.
+- **Smoke IA real:** missão sintética de duas etapas, com duas versões na primeira etapa e uma na segunda. Proposta vinculada à missão e comparação com seis respostas. 11 chamadas, 17.063 tokens, US$ 0,01280695 informados pelo provedor no smoke concluído. Ver [SMOKE-MISSOES.json](SMOKE-MISSOES.json). Uma tentativa anterior foi rejeitada pelo validador de fontes; a regra de IDs foi esclarecida antes da repetição. O custo registrado não inclui essa tentativa anterior.
+- **Resultado:** atual e candidata tiveram 100/100 nos checks estruturais. Isso comprova funcionamento da integração, não ganho semântico. O smoke não promove a instrução em produção; as confirmações de etapa usam dados fictícios para testar o fluxo.
+- **Migração:** backup privado do SQLite antes de reiniciar o serviço; v1.1.0 iniciou com dados preservados. Guias PT/EN/ES verificados em 360px e 1440px.
+
+## Evidências anteriores — v1.0.0
 
 Data: 25/09/2026. Dados sintéticos; nenhum conteúdo privado usado no teste pago.
 

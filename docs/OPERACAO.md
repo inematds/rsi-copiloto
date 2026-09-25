@@ -1,4 +1,4 @@
-# Operação — RSI Copiloto v1.0.0
+# Operação — RSI Copiloto v1.1.0
 
 ## Instalação individual
 
@@ -76,3 +76,17 @@ systemctl --user disable --now rsi-copiloto
 ```
 
 Um serviço de usuário inicia na sessão do usuário; operar sem sessão ativa exige configurar linger separadamente. Nenhuma rotina é ativada por instalar o serviço.
+
+## Missões e LOOP-R (v1.1.0)
+
+A tela **Missões** é agora o fluxo principal. Informe objetivo e contexto; a IA propõe 1–5 etapas. O plano distingue produção de documentos (`draft`) e ações fora da capacidade do sistema (`manual`). Aprovar o plano executa a primeira etapa. Avaliar e aprovar a entrega já dispara a próxima, com os resultados aprovados e seus comentários. Pedir correção gera outra versão da mesma etapa (até 10 versões). Pausar preserva o cursor; retomar recupera a decisão pendente. Cancelar encerra sem apagar evidências.
+
+Estados: `plan → ready → review/manual → ready → … → completed`, com pausa e cancelamento. Cada decisão leva o número de revisão atual: cliques repetidos e decisões em telas antigas são recusados. Aprovações são persistidas antes da próxima chamada. Se a IA falhar ou atingir o limite diário, a missão fica `ready` com erro visível, sem perder etapas aprovadas. A próxima tentativa executa somente a etapa pendente. Reiniciar o servidor não dispara missões automaticamente.
+
+A instrução é fixada na criação da missão. Promoções posteriores afetam novas missões; nunca alteram instruções no meio do trabalho já aprovado. Resultados anteriores são contexto de execução, não fontes de memória. Citações só aceitam IDs de memórias efetivamente fornecidas ao modelo.
+
+**LOOP-R conectado:** ao concluir, o painel calcula nota média e quantidade de correções. O botão **Iniciar LOOP-R desta missão** passa evidências de cada etapa (versões, correções e revisão) para a proposta de instrução. A candidata fica vinculada à missão e segue o laboratório existente: comparação, avaliação humana, promoção e rollback. O sistema não promove automaticamente uma hipótese e não interpreta notas estruturais iguais como ganho de qualidade. Os três testes gerais continuam sendo uma avaliação inicial limitada; a validação do operador precisa considerar a tarefa real.
+
+Salvamento na memória não é requisito para continuar. O histórico da missão contém entregas e avaliações. O backup v1.0 continua aceito e recebe uma lista vazia de missões; backups novos incluem missões e são validados antes de restaurar.
+
+Testes específicos: `python3 -m unittest discover -s tests -v`, `node tests/missions-browser.cjs` (Playwright) e `python3 -m scripts.smoke_missions` (opcional pago, banco temporário e dados fictícios). A demonstração pública executa a máquina de estados com exemplos programados; a produção do conteúdo específico usa a versão local com IA.
