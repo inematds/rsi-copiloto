@@ -1,4 +1,5 @@
 | data | o que quebrou | menor correção | prompt ou infra |
+| 2026-09-25 | Primeiro Actions executou antes de habilitar Pages no repo novo | Habilitar build_type=workflow na API e repetir a execução falha | infra |
 | 2026-09-25 | Blocos de código do template de guia alargavam o grid em 360px | Aplicar min-width:0 aos filhos de grid e step; manter scroll dentro do pre | infra |
 | 2026-09-25 | Inserção no portal buscou array sem anotação TypeScript | Localizar declaração tipada real antes de inserir; validação interrompeu sem alterar arquivos | infra |
 | 2026-09-25 | Teste de importação consultava toast antes de terminar a leitura assíncrona do arquivo | Esperar a mensagem correspondente antes de validar o resultado | infra |
