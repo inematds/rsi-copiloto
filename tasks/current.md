@@ -13,4 +13,4 @@
 - [x] LOOP-R ligado às avaliações e correções da missão
 - [x] Testes backend, navegador, smoke IA e guias trilingues
 - [x] Migração local com backup e serviço reiniciado
-- [ ] Publicação da atualização no mesmo endereço
+- [x] Publicação da atualização no mesmo endereço; HTTP 200 e fluxo completo no site público verificados

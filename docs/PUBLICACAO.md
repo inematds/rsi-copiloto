@@ -1,5 +1,14 @@
 # Publicação — RSI Copiloto v1.0.0
 
+## Atualização v1.1.0 — missões e LOOP-R conectados
+
+Código publicado em `145730d`; GitHub Actions `36108305400` concluído com sucesso. App, módulo de missões e guias PT/EN/ES retornaram HTTP 200 com o conteúdo novo. Teste completo de missão até promoção na demonstração também passou no site público, sem erros de página. Serviço local v1.1.0 ativo após backup privado e migração preservando dados. Os links já cadastrados no portal permanecem os mesmos; não foram criadas entradas duplicadas.
+
+Detalhes: [VALIDACAO.md](VALIDACAO.md) e [SMOKE-MISSOES.json](SMOKE-MISSOES.json).
+
+## Publicação inicial v1.0.0
+
+
 25/09/2026. Projeto novo e independente de `rsi`, criado por instrução do usuário. Os arquivos existentes de `rsi` não foram alterados.
 
 ## Endereços verificados
