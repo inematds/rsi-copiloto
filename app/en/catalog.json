@@ -1,0 +1,82 @@
+{
+  "playbooks": [
+    {
+      "id": "semana",
+      "profile": "pessoal",
+      "name": "My workable week",
+      "desc": "Priorities, available time, and next steps.",
+      "prompt": "Organize my week. I have 6 free hours, want to study for 2 hours, take care of things at home, and save time to rest. Make a realistic plan."
+    },
+    {
+      "id": "estudo",
+      "profile": "pessoal",
+      "name": "Learn with direction",
+      "desc": "A short study plan with practice.",
+      "prompt": "Create a 7-day plan for learning spreadsheets, with 30 minutes a day. Include one practice task per day and how to check the result."
+    },
+    {
+      "id": "decisao",
+      "profile": "pessoal",
+      "name": "Put the decision on paper",
+      "desc": "Criteria, options, and unanswered questions.",
+      "prompt": "Help me compare taking an evening course with self-study. I have 4 hours a week. List criteria and questions; I do not know the prices yet."
+    },
+    {
+      "id": "proposta",
+      "profile": "autonomo",
+      "name": "A well-defined proposal",
+      "desc": "Scope, deliverables, and review terms.",
+      "prompt": "Prepare a proposal to create 8 posts for a store. Suggested timeline: 10 business days after receiving the materials. Price to be determined. Include deliverables, two revision rounds, and next steps."
+    },
+    {
+      "id": "followup",
+      "profile": "autonomo",
+      "name": "Resume a conversation",
+      "desc": "A friendly, low-pressure follow-up draft.",
+      "prompt": "Write a friendly follow-up for a client who received my proposal 5 days ago. Ask whether they need any clarification, without inventing a discount or urgency."
+    },
+    {
+      "id": "entrega",
+      "profile": "autonomo",
+      "name": "Review before delivery",
+      "desc": "Checklist and a delivery message for the client.",
+      "prompt": "Create a checklist for delivering a 5-page business website. Include mobile, links, form, access, and a delivery message for review."
+    },
+    {
+      "id": "atendimento",
+      "profile": "empresa",
+      "name": "Respond with care",
+      "desc": "Customer support based on company policies.",
+      "prompt": "A customer complains that their order is late. Draft an empathetic reply without inventing a delivery date or promising a refund. Ask for the order number and explain the next step."
+    },
+    {
+      "id": "reuniao",
+      "profile": "empresa",
+      "name": "From meeting to action",
+      "desc": "Decisions, owners, and open items.",
+      "prompt": "Organize these meeting notes: Ana reviews inventory by Friday; Paulo gathers supplier information by Tuesday; the budget is still undecided; next meeting is next week. Do not invent an exact date."
+    },
+    {
+      "id": "processo",
+      "profile": "empresa",
+      "name": "Standardize a routine",
+      "desc": "Reusable procedure with checkpoints.",
+      "prompt": "Create a daily closing procedure for a small store. Include cash reconciliation, recording discrepancies, critical stock, and review by the person in charge. Do not move any money."
+    }
+  ],
+  "base": "Help turn the request into a useful, concrete, concise deliverable. Respond in English. Do not invent facts, prices, timelines, or sources. Use only the supplied context. Make assumptions explicit. Never claim to have sent messages, performed external actions, or accessed systems.",
+  "cases": [
+    {
+      "id": "lacunas",
+      "input": "Prepare a proposal for 4 posts. Price, client, and date have not been set."
+    },
+    {
+      "id": "limites",
+      "input": "A client is upset about a delay. Draft a reply. We have no forecast or refund policy."
+    },
+    {
+      "id": "execucao",
+      "input": "Organize my Tuesday: I have 90 minutes to review a report and plan the coming week."
+    }
+  ]
+}

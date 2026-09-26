@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="RSI Copiloto: assistente para organizar o trabalho, criar entregas e testar melhorias com supervisão.">
-<meta name="theme-color" content="#121416"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/rsi-copiloto/app/"><link rel="alternate" hreflang="en" href="https://inematds.github.io/rsi-copiloto/app/en/"><link rel="alternate" hreflang="es" href="https://inematds.github.io/rsi-copiloto/app/es/"><title>RSI Copiloto — sua mesa de trabalho</title>
-<link rel="stylesheet" href="style.css"><script src="i18n.js" defer></script><script src="backup.js" defer></script><script src="demo.js" defer></script><script src="missions.js" defer></script><script src="app.js" defer></script>
+<meta name="description" content="RSI Copiloto: an assistant for organizing work, creating deliverables, and testing improvements with human oversight.">
+<meta name="theme-color" content="#121416"><link rel="alternate" hreflang="pt-BR" href="https://inematds.github.io/rsi-copiloto/app/"><link rel="alternate" hreflang="en" href="https://inematds.github.io/rsi-copiloto/app/en/"><link rel="alternate" hreflang="es" href="https://inematds.github.io/rsi-copiloto/app/es/"><link rel="canonical" href="https://inematds.github.io/rsi-copiloto/app/en/"><title>RSI Copiloto — your workspace</title>
+<link rel="stylesheet" href="../style.css"><script src="../i18n.js" defer></script><script src="../backup.js" defer></script><script src="../demo.js" defer></script><script src="../missions.js" defer></script><script src="../app.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Pular para o conteúdo</a>
@@ -13,7 +13,7 @@
 <a class="brand" href="#inicio" aria-label="RSI Copiloto, início"><span class="brand-mark" aria-hidden="true">r</span><span>RSI <strong>Copiloto</strong><small>INEMA · laboratório aplicado</small></span></a>
 <label for="profile" class="profile-label">Meu espaço de trabalho</label>
 <select id="profile"><option value="pessoal">Pessoa física</option><option value="autonomo">Profissional independente</option><option value="empresa">Pequena empresa</option></select>
-<div class="language" aria-label="Idioma"><a data-lang="pt" href="./">PT</a><span>·</span><a data-lang="en" href="en/">EN</a><span>·</span><a data-lang="es" href="es/">ES</a></div>
+<div class="language" aria-label="Idioma"><a data-lang="pt" href="../">PT</a><span>·</span><a data-lang="en" href="../en/">EN</a><span>·</span><a data-lang="es" href="../es/">ES</a></div>
 <nav aria-label="Navegação principal" id="nav">
 <a href="#inicio" data-page="inicio"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10 12 3l9 7M5 9v12h14V9M9 21v-8h6v8"/></svg></span> Visão do dia</a>
 <a href="#assistente" data-page="assistente"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v4m0 10v4M3 12h4m10 0h4M6 6l3 3m6 6 3 3M6 18l3-3m6-6 3-3"/><circle cx="12" cy="12" r="3"/></svg></span> Missões</a>
@@ -23,13 +23,13 @@
 <a href="#laboratorio" data-page="laboratorio"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h16M5 16l5-5 4 3 6-9m-6 0h6v6"/></svg></span> Evolução RSI</a>
 <a href="#historico" data-page="historico"><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg></span> Histórico</a>
 </nav>
-<div class="sidebar-bottom"><div class="active-version"><span class="dot"></span><span id="active-version">Instrução inicial</span></div><a href="#configuracoes" data-page="configuracoes">Dados e configuração</a><div class="ecosystem"><a href="../guia/">Guia de uso ↗</a><a href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB ↗</a></div></div>
+<div class="sidebar-bottom"><div class="active-version"><span class="dot"></span><span id="active-version">Instrução inicial</span></div><a href="#configuracoes" data-page="configuracoes">Dados e configuração</a><div class="ecosystem"><a href="../../guia/en/">Guia de uso ↗</a><a href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB ↗</a></div></div>
 </aside>
 <div class="workspace">
 <header class="topbar"><span id="breadcrumb">Sua mesa de trabalho</span><div><span id="runtime" class="status">Carregando…</span><button id="theme" class="quiet" aria-label="Alternar tema">Tema claro</button></div></header>
 <div id="mode-banner" class="mode-banner" hidden></div>
 <main id="main" tabindex="-1"><div class="loading">Abrindo sua mesa de trabalho…</div></main>
-<footer class="app-footer">Você decide. O copiloto organiza, prepara e aprende com a revisão.<a href="../guia/">Guia de uso · v1.2.0</a></footer>
+<footer class="app-footer">Você decide. O copiloto organiza, prepara e aprende com a revisão.<a href="../../guia/en/">User guide · v1.2.0</a></footer>
 </div>
 </div>
 <div id="toast" role="status" aria-live="polite" hidden></div>

@@ -1,4 +1,6 @@
 | data | o que quebrou | menor correção | prompt ou infra |
+| 2026-09-26 | Tradução DOM repetia escritas idênticas em ES e travava a interface ao trocar de idioma | Só gravar texto/opção quando o valor traduzido diferir do atual | prompt |
+| 2026-09-26 | Tradução DOM repetia escritas idênticas em ES e travava a interface ao trocar de idioma | Só gravar texto/opção quando o valor traduzido diferir do atual | prompt |
 | 2026-09-25 | A entrega inicial terminava em rascunho/memória e não continuava a missão após aprovação, deixando LOOP-R desconectado | Adicionar estado de missão e ligar avaliações ao laboratório existente, preservando o motor e os dados | prompt |
 | 2026-09-25 | IA tratou referência a etapa anterior como fonte de memória no smoke de missões | Informar lista exata de IDs permitidos e excluir referências internas; manter rejeição de fontes inventadas | prompt |
 | 2026-09-25 | Teste mobile esperou texto da versão em elemento oculto da barra lateral | Aguardar versão ativa persistida em vez de visibilidade de elemento desktop | infra |

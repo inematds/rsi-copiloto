@@ -13,7 +13,7 @@ from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 
-VERSION = '1.1.0'
+VERSION = '1.2.0'
 PROFILES = {'pessoal': 'Pessoa física', 'autonomo': 'Profissional independente', 'empresa': 'Pequena empresa'}
 BASE_PROMPT = ('Ajude a transformar a demanda em uma entrega útil, concreta e curta. '
                'Responda em português. Não invente dados, preços, prazos nem fontes. '

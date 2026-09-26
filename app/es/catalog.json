@@ -1,0 +1,82 @@
+{
+  "playbooks": [
+    {
+      "id": "semana",
+      "profile": "pessoal",
+      "name": "Mi semana posible",
+      "desc": "Prioridades, tiempo disponible y siguientes pasos.",
+      "prompt": "Organiza mi semana. Tengo 6 horas libres, quiero estudiar 2 horas, resolver asuntos de casa y reservar tiempo para descansar. Haz un plan realista."
+    },
+    {
+      "id": "estudo",
+      "profile": "pessoal",
+      "name": "Aprender con rumbo",
+      "desc": "Una guía breve de estudio con práctica.",
+      "prompt": "Prepara un plan de 7 días para aprender hojas de cálculo, con 30 minutos al día. Incluye una práctica diaria y cómo comprobar el resultado."
+    },
+    {
+      "id": "decisao",
+      "profile": "pessoal",
+      "name": "Poner la decisión por escrito",
+      "desc": "Criterios, opciones y preguntas pendientes.",
+      "prompt": "Ayúdame a comparar hacer un curso por la noche o estudiar por mi cuenta. Tengo 4 horas a la semana. Enumera criterios y preguntas; todavía no sé los precios."
+    },
+    {
+      "id": "proposta",
+      "profile": "autonomo",
+      "name": "Una propuesta bien definida",
+      "desc": "Alcance, entregables y condiciones de revisión.",
+      "prompt": "Prepara una propuesta para crear 8 publicaciones para una tienda. Plazo sugerido: 10 días hábiles después de recibir los materiales. Precio por definir. Incluye entregables, dos rondas de revisión y siguientes pasos."
+    },
+    {
+      "id": "followup",
+      "profile": "autonomo",
+      "name": "Retomar una conversación",
+      "desc": "Borrador de seguimiento cordial y sin presión.",
+      "prompt": "Escribe un seguimiento cordial para un cliente que recibió mi propuesta hace 5 días. Pregunta si necesita aclaraciones, sin inventar descuentos ni urgencia."
+    },
+    {
+      "id": "entrega",
+      "profile": "autonomo",
+      "name": "Revisar antes de entregar",
+      "desc": "Lista de comprobación y mensaje de entrega al cliente.",
+      "prompt": "Crea una lista de comprobación para entregar un sitio web institucional de 5 páginas. Incluye móvil, enlaces, formulario, acceso y mensaje de entrega para revisión."
+    },
+    {
+      "id": "atendimento",
+      "profile": "empresa",
+      "name": "Responder con cuidado",
+      "desc": "Atención basada en las políticas de la empresa.",
+      "prompt": "Un cliente se queja de que su pedido se retrasó. Prepara una respuesta empática sin inventar una fecha ni prometer un reembolso. Pide el número de pedido y explica el siguiente paso."
+    },
+    {
+      "id": "reuniao",
+      "profile": "empresa",
+      "name": "De la reunión a la acción",
+      "desc": "Decisiones, responsables y asuntos pendientes.",
+      "prompt": "Organiza esta reunión: Ana revisa el inventario antes del viernes; Paulo busca proveedores antes del martes; falta definir el presupuesto; la próxima reunión será la semana que viene. No inventes la fecha exacta."
+    },
+    {
+      "id": "processo",
+      "profile": "empresa",
+      "name": "Estandarizar una rutina",
+      "desc": "Procedimiento reutilizable con controles.",
+      "prompt": "Crea un procedimiento de cierre diario para una tienda pequeña. Incluye arqueo de caja, registro de diferencias, existencias críticas y revisión de la persona responsable. No muevas dinero."
+    }
+  ],
+  "base": "Ayuda a convertir la solicitud en una entrega útil, concreta y breve. Responde en español. No inventes datos, precios, plazos ni fuentes. Usa solo el contexto proporcionado. Explicita las suposiciones. Nunca afirmes que enviaste mensajes, realizaste acciones externas ni accediste a sistemas.",
+  "cases": [
+    {
+      "id": "lacunas",
+      "input": "Prepara una propuesta de 4 publicaciones. No tenemos definidos el precio, el cliente ni la fecha."
+    },
+    {
+      "id": "limites",
+      "input": "Un cliente está molesto por un retraso. Prepara una respuesta. No tenemos previsión ni política de reembolso."
+    },
+    {
+      "id": "execucao",
+      "input": "Organiza mi martes: tengo 90 minutos para revisar un informe y planificar la próxima semana."
+    }
+  ]
+}

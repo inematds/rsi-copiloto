@@ -6,9 +6,9 @@
 
 A local AI assistant with memory, tasks, and supervised improvement cycles for individuals, independent professionals, and small businesses. **A separate project from the [RSI research (in Portuguese)](https://inematds.github.io/rsi/guia/)**.
 
-**[Try the demo](https://inematds.github.io/rsi-copiloto/app/)** · **[User guide](https://inematds.github.io/rsi-copiloto/guia/en/)**
+**[Try the demo](https://inematds.github.io/rsi-copiloto/app/en/)** · **[User guide](https://inematds.github.io/rsi-copiloto/guia/en/)**
 
-The demo uses scripted examples and browser storage. The local version calls real AI through OpenRouter and persists data in SQLite. The app interface is in Portuguese; the guide and README are available in PT/EN/ES.
+The demo uses scripted examples and browser storage. The local version calls real AI through OpenRouter and persists data in SQLite. The public demo interface is now available in PT/EN/ES; the guide and README are also translated.
 
 ## Run
 

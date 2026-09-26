@@ -8,7 +8,7 @@ Assistente local com IA, memória, tarefas e ciclos de melhoria supervisionada p
 
 **[Experimentar demonstração](https://inematds.github.io/rsi-copiloto/app/)** · **[Guia de uso](https://inematds.github.io/rsi-copiloto/guia/)**
 
-A demonstração usa exemplos programados e armazenamento do navegador. A versão local chama IA real via OpenRouter e persiste dados em SQLite. A interface está em português; guia e README estão em PT/EN/ES.
+A demonstração usa exemplos programados e armazenamento do navegador. A versão local chama IA real via OpenRouter e persiste dados em SQLite. A demonstração agora oferece interface PT/EN/ES; o guia e o README também estão traduzidos.
 
 ## Rodar
 

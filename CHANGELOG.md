@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.2.0 — 2026-09-26
+
+- Interface da demonstração pública disponível em português, inglês e espanhol, com exemplos programados por idioma.
+- Seletor mantém rota, query e armazenamento ao trocar idioma; conteúdo digitado ou já salvo não é traduzido.
+
+
 ## v1.1.0 — 2026-09-25
 
 - Missões persistentes: plano, aprovação, execução por etapa, avaliação, correção, pausa e retomada.

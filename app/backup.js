@@ -20,5 +20,5 @@ window.validateRSIBackup=function(b){
  if(m.error!==null&&typeof m.error!=='string')fail();if(![null,'plan','ready','review','manual'].includes(m.resume)||(m.status==='paused'&&m.resume===null))fail();
  for(const [i,x] of m.steps.entries()){if(!obj(x)||!str(x,['id','title','instruction','feedback'])||!['draft','manual'].includes(x.kind)||!['pending','review','manual','approved'].includes(x.status)||!Array.isArray(x.attempts)||x.attempts.length>10)fail();if(i<m.current&&x.status!=='approved')fail();if(x.review!==null&&(!obj(x.review)||typeof x.review.note!=='string'||!Number.isInteger(x.review.rating)||x.review.rating<1||x.review.rating>5))fail();if(x.status==='approved'&&x.review===null)fail();if(x.status==='review'&&!x.attempts.length)fail();for(const a of x.attempts){if(!obj(a)||!str(a,['run','created'])||!Array.isArray(a.context)||a.context.some(c=>!obj(c)||!str(c,['id','title']))||!b.runs.some(r=>r.id===a.run))fail();output(a.output);}}
  if(['review','manual'].includes(m.status)&&(m.steps[m.current].status!==m.status||(m.status==='manual'&&m.steps[m.current].kind!=='manual')))fail();}
- return {...structuredClone(b),missions:structuredClone(missions),version:'1.1.0'};
+ return {...structuredClone(b),missions:structuredClone(missions),version:'1.2.0'};
 };
