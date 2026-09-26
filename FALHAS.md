@@ -1,3 +1,4 @@
+| 2026-09-26 | Bump de versão atualizou também a descrição histórica do serviço e dos testes reais | Separar validação histórica v1.1.0 de testes locais e publicação v1.2.0; não afirmar reinício nem smoke novo | prompt |
 | data | o que quebrou | menor correção | prompt ou infra |
 | 2026-09-26 | Tradução DOM repetia escritas idênticas em ES e travava a interface ao trocar de idioma | Só gravar texto/opção quando o valor traduzido diferir do atual | prompt |
 | 2026-09-26 | Tradução DOM repetia escritas idênticas em ES e travava a interface ao trocar de idioma | Só gravar texto/opção quando o valor traduzido diferir do atual | prompt |
